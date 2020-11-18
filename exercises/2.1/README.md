@@ -1,0 +1,1 @@
+# Exercício inicial para demonstração da criação e sincronização de um repositório local e remoto no github
