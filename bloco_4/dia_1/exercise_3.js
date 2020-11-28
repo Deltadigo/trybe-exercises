@@ -1,11 +1,11 @@
-let a = 15;
-let b = 10;
-let c = 15;
+let a = 25;
+let b = 25;
+let c = 20;
 
 if (a > b && a > c) {
   console.log('A é maior que B e C. O valor de A é: ' + a)
 } else if (a == b && a == c) {
-  console.log('A é igual a B e C')
+  console.log('Todos os números são iguais')
 } else if (b > a && b > c) {
   console.log('B é maior que A e C. O valor de B é: ' + b)
 } else if (c > a && c > b) {
