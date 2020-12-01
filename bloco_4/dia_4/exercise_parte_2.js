@@ -58,3 +58,28 @@ console.log(maiorIndice); */
 
 const menorIndice = menorInteiro([2, 4, 6, 7, 10, 0, -3]);
 console.log(menorIndice); */
+
+// Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+// Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
+// Valor esperado no retorno da função: Fernanda .
+
+function maiorNome(nomes) {
+  let qtdeCaracteres = 0;
+  let maiorNome = '';
+
+  for (let index = 0; index < nomes.length; index += 1){
+    if (nomes[index === 0]) {
+      qtdeCaracteres = nomes[index].length;
+    } else {
+      if (nomes[index].length > qtdeCaracteres) {
+        qtdeCaracteres = nomes[index].length;
+        maiorNome = nomes[index];
+      }
+    }
+  }
+
+  return maiorNome;
+}
+
+const nomeMaisCaracteres = maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
+console.log(nomeMaisCaracteres);
