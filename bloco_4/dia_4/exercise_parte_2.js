@@ -132,7 +132,7 @@ console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3])); */
 // Valor de teste: N = 5 .
 // Valor esperado no retorno da função: 1+2+3+4+5 = 15.
 
-function somarNumeros(numeroMaximo) {
+/* function somarNumeros(numeroMaximo) {
   let soma = 0;
   for (let index = 1; index <= numeroMaximo; index += 1) {
     soma += index;
@@ -141,4 +141,26 @@ function somarNumeros(numeroMaximo) {
 }
 
 const valorTotal = somarNumeros(5);
-console.log(valorTotal)
+console.log(valorTotal) */
+
+// Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+// Valor de teste: "trybe" e "be"
+// Valor esperado no retorno da função: true
+// verificaFimPalavra("trybe", "be") ;
+// Retorno esperado: true
+// verificaFimPalavra("joaofernando", "fernan") ;
+// Retorno esperado: false
+
+function comparaStrings(word, ending) {
+  if (ending.length < word.length) {
+    const cutWord = word.slice(-ending.length);
+    if (cutWord === ending.toLowerCase()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+const retorno = comparaStrings('Trybe', 'be');
+console.log(retorno)
