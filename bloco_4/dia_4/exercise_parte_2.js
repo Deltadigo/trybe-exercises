@@ -63,7 +63,7 @@ console.log(menorIndice); */
 // Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
 // Valor esperado no retorno da função: Fernanda .
 
-function maiorNome(nomes) {
+/* function maiorNome(nomes) {
   let qtdeCaracteres = 0;
   let maiorNome = '';
 
@@ -82,4 +82,48 @@ function maiorNome(nomes) {
 }
 
 const nomeMaisCaracteres = maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
-console.log(nomeMaisCaracteres);
+console.log(nomeMaisCaracteres); */
+
+// Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+// Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
+// Valor esperado no retorno da função: 2 .
+
+function maisRepetido(inteiros) {
+  let numeros = [];
+
+  for (let index = 0; index < inteiros.length; index += 1) {
+
+    const objeto = {
+      qtdeRepeticoes: 0,
+      numero: 0
+    };
+
+    for (let index2 = 0; index2 < inteiros.length; index2 += 1) {
+      if (inteiros[index] === inteiros[index2]) {
+        objeto.qtdeRepeticoes = objeto.qtdeRepeticoes + 1;
+        objeto.numero = inteiros[index];
+      }
+    }
+
+    numeros.push(objeto);
+
+  }
+  
+  let maiorRepeticao = 0;
+  let numero = 0;
+
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (index === 0) {
+      maiorRepeticao = numeros[index].qtdeRepeticoes;
+      numero = numeros[index].numero;
+    } else {
+      if (numeros[index].qtdeRepeticoes > numeros[index - 1].qtdeRepeticoes){
+        maiorRepeticao = numeros[index].qtdeRepeticoes;
+        numero = numeros[index].numero;
+      }
+    }
+  }
+  return numero;
+}
+
+console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
