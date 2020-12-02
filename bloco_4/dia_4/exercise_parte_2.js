@@ -88,7 +88,7 @@ console.log(nomeMaisCaracteres); */
 // Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
 // Valor esperado no retorno da função: 2 .
 
-function maisRepetido(inteiros) {
+/* function maisRepetido(inteiros) {
   let numeros = [];
 
   for (let index = 0; index < inteiros.length; index += 1) {
@@ -126,4 +126,19 @@ function maisRepetido(inteiros) {
   return numero;
 }
 
-console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
+console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3])); */
+
+// Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+// Valor de teste: N = 5 .
+// Valor esperado no retorno da função: 1+2+3+4+5 = 15.
+
+function somarNumeros(numeroMaximo) {
+  let soma = 0;
+  for (let index = 1; index <= numeroMaximo; index += 1) {
+    soma += index;
+  }
+  return soma;
+}
+
+const valorTotal = somarNumeros(5);
+console.log(valorTotal)
